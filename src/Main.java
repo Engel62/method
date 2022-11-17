@@ -1,15 +1,13 @@
 
     public class Main {
-        ////////// Задание 1
+        //Задание 1
         public static void printIsLeapYear(int year) {
             boolean leapYear = isLeapYear(year);
             printIsLeapYearResult(year, leapYear);
         }
-
         private static boolean isLeapYear(int year) {
             return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
         }
-
         private static void printIsLeapYearResult(int year, boolean leapYear) {
             if (leapYear) {
                 System.out.println(year + " — високосный год");
@@ -17,14 +15,11 @@
                 System.out.println(year + " — не високосный год");
             }
         }
-
-
-        ////////// Задание 2
+        ///Задание 2
         public static void printAppInstallMessage(int clientOS, int clientDeviceYear) {
             boolean oldDevice = isOldDevice(clientDeviceYear);
             printAppInstallMessageResult(clientOS, oldDevice);
         }
-
         private static String defineClientOS(int clientOS) {
             if (clientOS == 0) {
                 return "IOS";
@@ -45,9 +40,7 @@
                 System.out.println("Установите приложение для " + defineClientOS(clientOS) + " по ссылке");
             }
         }
-
-
-        ////////// Задание 3
+        ///Задание 3
         public static void printDeliveryDaysAmount(int deliveryDistance) {
             int deliveryDays = printDeliveryDaysAmountResult(deliveryDistance);
             if (deliveryDays == 0) {
@@ -56,7 +49,6 @@
                 System.out.println("Потребуется дней: " + deliveryDays);
             }
         }
-
         private static int printDeliveryDaysAmountResult(int deliveryDistance) {
             int firstInterval = 20;
             int secondInterval = 60;
@@ -74,15 +66,12 @@
         public static void main(String[] args) {
 
             ///// Задание 1
-            printIsLeapYear(2020);
+            printIsLeapYear(2022);
 
             ///// Задание 2
-            printAppInstallMessage(0, 2020);
+            printAppInstallMessage(1, 2014);
 
             ///// Задание 3
             printDeliveryDaysAmount(95);
         }
-
-
-
     }
